@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Abstracts
+namespace Interfaces
 {
     public interface ITrigger
     {

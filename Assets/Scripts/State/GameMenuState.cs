@@ -1,5 +1,5 @@
-using Abstracts;
 using Managers;
+using Statics;
 using UnityEngine;
 
 namespace State

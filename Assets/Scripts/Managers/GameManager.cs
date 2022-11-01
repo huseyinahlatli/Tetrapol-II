@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -14,6 +15,7 @@ namespace Managers
         [Header ("Game Sounds")]
         public AudioClip coinSound;
         public AudioClip damageSound;
+        public AudioClip enemySpawnSound;
         public AudioClip gameOverSound;
         public AudioClip gameWinSound;
         [Space]
@@ -24,6 +26,8 @@ namespace Managers
         private const int Delay = 5;
         private const float Volume = 1f;
 
+        #region SFX Controller
+        
         public void PlayCoinSound(Vector3 soundPosition)
         {
             if (!isGameOver) { AudioSource.PlayClipAtPoint(coinSound, soundPosition, Volume); }
@@ -34,11 +38,18 @@ namespace Managers
             if (!isGameOver) { AudioSource.PlayClipAtPoint(damageSound, soundPosition, Volume); }
         }
 
+        public void PlayEnemySpawnSound(Vector3 soundPosition)
+        {
+            AudioSource.PlayClipAtPoint(enemySpawnSound, soundPosition, Volume);
+        }
+        
         public void PlayGameStateSound(AudioClip sound)
         {
             AudioSource.PlayClipAtPoint(sound, player.transform.position, Volume);
             transform.GetComponent<AudioSource>().enabled = false;
         }
+        
+        #endregion SFX Controller
 
         public void AutoRestartGame()
         {

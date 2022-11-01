@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Abstracts;
+using Interfaces;
 using Singleton;
 using UnityEngine;
 
@@ -7,9 +7,9 @@ namespace Managers
 {
     public class StarController : Singleton<StarController>, IStar
     {
-        public bool isStarsCompleted;
         public int MaxStar { get; set; } = 25;
         public List<GameObject> Stars { get; set; } = new List<GameObject>();
+        public bool isStarsCompleted;
 
         public void AddStar(GameObject star)
         {

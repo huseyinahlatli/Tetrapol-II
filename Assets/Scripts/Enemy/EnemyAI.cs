@@ -1,4 +1,5 @@
-using Abstracts;
+using Interfaces;
+using Statics;
 using UnityEngine;
 using UnityEngine.AI;
 

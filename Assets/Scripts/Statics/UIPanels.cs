@@ -1,7 +1,8 @@
-﻿using Managers;
+﻿using Interfaces;
+using Managers;
 using UnityEngine;
 
-namespace Abstracts
+namespace Statics
 {
     public static class UIPanels
     {

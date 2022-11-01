@@ -1,6 +1,6 @@
-using System;
-using Abstracts;
+using Interfaces;
 using Singleton;
+using Statics;
 using UnityEngine;
 
 namespace Player
@@ -11,7 +11,7 @@ namespace Player
         public bool isFall;
 
         private Rigidbody _rigidbody;
-        private const float AxisY = -1f;
+        private const float AxisY = -.3f;
         private float _vertical;
         private float _horizontal;
 

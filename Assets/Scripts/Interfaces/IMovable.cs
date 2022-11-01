@@ -1,4 +1,4 @@
-namespace Abstracts
+namespace Interfaces
 {
     public interface IMovable
     {

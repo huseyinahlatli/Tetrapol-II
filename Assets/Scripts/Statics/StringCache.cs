@@ -1,4 +1,4 @@
-namespace Abstracts
+namespace Statics
 {
     public static class StringCache
     {

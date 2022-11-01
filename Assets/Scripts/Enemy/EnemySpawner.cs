@@ -1,4 +1,6 @@
-using Abstracts;
+using Interfaces;
+using Managers;
+using Statics;
 using UnityEngine;
 
 namespace Enemy
@@ -13,7 +15,8 @@ namespace Enemy
         {
             if (other.gameObject.CompareTag(StringCache.Enemy) && !_isSpawn)
             {
-                var enemySpawn = Instantiate(enemyPrefab, Position, Quaternion.identity);
+                Instantiate(enemyPrefab, Position, Quaternion.identity);
+                GameManager.Instance.PlayEnemySpawnSound(Position);
                 _isSpawn = true;
                 gameObject.SetActive(false);
             }

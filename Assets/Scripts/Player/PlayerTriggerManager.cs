@@ -1,5 +1,6 @@
-using Abstracts;
+using Interfaces;
 using Managers;
+using Statics;
 using UnityEngine;
 
 namespace Player
@@ -7,6 +8,7 @@ namespace Player
     public class PlayerTriggerManager : MonoBehaviour, ITrigger
     {
         private const int Damage = 20;
+        
         public void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag(StringCache.Star))

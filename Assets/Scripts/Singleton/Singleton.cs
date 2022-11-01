@@ -10,9 +10,13 @@ namespace Singleton
         public void Awake()
         {
             if (_instance == null)
+            {
                 _instance = this as T;
+            }
             else
+            {
                 Destroy(gameObject);
+            }
         }
     }
 }
